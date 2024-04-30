@@ -1,0 +1,859 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #044bb7;
+    --light-color: #000000;
+    --dark-color: #111;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    font-family: 'Poppins', sans-serif;
+    background: #Fff;
+    line-height: 1.5;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/**************** NAVBAR ***************/
+.navbar {
+    background: linear-gradient(29deg, rgba(0,0,0,1) 29%, rgb(0, 0, 38) 65%, rgb(7, 7, 88) 100%);    
+    padding: 8px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .main-menu ul {
+    display: flex;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.navbar ul li a:hover {
+    color: #4690ff;
+}
+
+.navbar .logo {
+    width: 100px;
+}
+
+/**************** HERO ***************/
+.hero {
+    overflow: hidden;
+    padding-top: 150px;
+}
+
+.hero .container {
+    background: url('./img\ /hero1.png') no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    height: 700px;
+    width: 100%;
+    overflow: hidden; 
+    padding-bottom: 20px;
+}
+
+.hero .hero-content {
+    width: 70%;
+}
+
+.hero .hero-text {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    font-size: 20px;
+}
+
+/**************** EKAHAU SECTION ***************/
+.ekahau {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 90px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ekahau-content {
+    align-items: center;
+    justify-content: center;
+}
+
+.ekahau h2 {
+    font-weight: 600;
+}
+
+.ekahau h4 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.ekahau-content p {
+    font-size: 18px;
+    letter-spacing: 1;
+    margin: 24px 0;
+}
+
+.ekahau img {
+    width: 500px;
+    margin-left: 70px;
+    margin-top: 40px;
+}
+
+.services-dark {
+    padding: 30px 0;
+}
+
+.services-light {
+    padding: 10px 0;
+    color: #0c101b;
+}
+
+.bg-light {
+    background-color: #111;
+}
+
+.video {
+    padding-bottom: 50px;
+}
+
+.video-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 13px;
+}
+
+.video-content video {
+    width: 170%; 
+    margin: -20%; 
+}
+  
+
+
+/**************** HOME CARDS SERVICES ***************/
+  .services {
+    padding-bottom: 60px;
+    background: #002e72;
+  }
+
+  .services-1 {
+    background-color: #002e72;
+    padding: 30px;
+  }
+
+  .services-bg {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    transition: all 0.4s;
+  }
+
+  .services-bg img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    aspect-ratio: 14/9;
+    border: 0.5px solid #fff;
+  }
+  
+  .container h2 {
+    color: #111;
+  }
+  
+  .services-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .bg-only {
+    padding: 20px;
+    color: #333;
+    border: 2px solid #fff;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .bg-only h2 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222;
+    text-transform: uppercase;
+  }
+
+  .bg-only h4 {
+    font-size: 22px;
+    color: #044bb7;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+
+  .bg-only p {
+    font-size: 18px;
+    color: #444;
+  } 
+
+/**************** REKLAME ***************/
+
+
+  
+/**************** ICONS ***************/
+  
+
+/**************** BILDER ***************/
+.container-slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 70vh;
+}
+
+/* Stil for slides */
+.slides {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Aktiverer aktiv slide */
+.active {
+    opacity: 1;
+}
+
+/* Tekstinnhold ved siden av bildeskyvedelen */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    background: #f2f2f2;
+}
+
+.text-cont h1 {
+    font-size: 10px;
+}
+
+.text-cont {
+    width: 95%;
+}
+
+.text-content h3 {
+    font-size: 25px;
+    color: #044bb7;
+    font-weight: 400;
+}
+
+.text-content h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.text-content p {
+    font-size: 18px;
+}
+
+.btn-ther {
+    display: inline-block;
+    padding: 11px 30px;
+    font-size: 18px;
+    background: #123872;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 26px;
+    width: 40%;
+    text-align: center;
+    border-radius: 15px;
+}
+ 
+/**************** CONTACT US FORM ***************/
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url('img\ /kontaktBG.png') no-repeat center center/cover;
+}
+
+.contact .content {
+    max-width: 900px;
+    text-align: center;
+    padding: 30px;
+}
+
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.contact .content p {
+    font-weight: 400;
+    color: #fff;
+    font-size: 24px;
+}
+
+.container-flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container-flex .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-flex .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container-flex .contactInfo .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container-flex .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container-flex .contactInfo .box .text h3 {
+    font-weight: 500;
+    color: #096afc;
+    font-size: 22px;
+}
+
+.box .text p {
+    font-size: 22px;
+}
+
+.contactForm {
+    width: 50%;
+    padding: 50px;
+    background: #fff;
+}
+
+.contactForm h2 {
+    font-size: 35px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox select {
+    width: 100%;  
+    padding: 5px 0;  
+    font-size: 16px;  
+    margin: 10px 0;  
+    border: none;  
+    border-bottom: 1px solid #333;  
+    outline: none;  
+    background-color: transparent;  
+    color: #666;  
+    transition: 0.5s;  
+}
+
+.contactForm .inputBox select:focus {
+    border-bottom: 1px solid #e91e63; 
+}
+
+.contactForm .inputBox option {
+    color: #333; 
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+    width: 120px;
+    background: #096afc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+
+}
+
+
+/**************** FOOTER ***************/
+.footer {
+    background-color: #0c101b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/**************** UTILITY CLASSES ***************/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-sm {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-x {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/**************** BUTTONS ***************/
+.btn {
+    display: inline-block;
+    padding: 16px 30px;
+    background: var(--light-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 14px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-dark {
+    color: #fff;
+    background: #21293e;
+}
+
+.btn-kontakt {
+    margin: 20px 0;
+    background-color: #247bff;
+}
+
+/**************** TEXT CLASSES ***************/
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 25px 0 40px;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-lgm {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: 600;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+    color: #fff;
+}
+
+.text-center-dark {
+    text-align: center;
+    color: #0c101b;
+}
+
+.text-center-dark-1 {
+    text-align: center;
+    color: #fff;
+}
+
+/**************** HAMBURGER BUTTONS ***************/
+.hamburger-button {
+    display: none;
+    background:  none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 6px 0;
+}
+
+/**************** MOBILE MENU ***************/
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    margin-top: 100px;
+    padding-right: 10px;
+}
+
+.mobile-menu ul li {
+    margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+
+
+/**************** MEDIA QUARY ***************/
+@media (max-width: 960px) {
+    .text-xxl {
+        font-size: 2.5rem;
+    }
+}
+
+
+ /* Media query for mobiltelefoner */
+ @media (max-width: 768px) {
+    /* Navbar section */
+    .navbar .main-menu {
+        display: none;
+        color: #111;
+    }
+
+    .navbar .hamburger-button {
+        display: block;
+    }
+
+
+    .mobile-menu ul li a {
+        color: #222;
+    }
+
+    .hero .container {
+        background: url('./img\ /løsdet-mobil.png') no-repeat;
+        background-size: 500px 600px;
+        background-position: bottom;
+        height: 850px;
+
+    }
+
+    .hero .hero-content,
+    .hero .hero-text {
+        width: 100%;
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    .hero .hero-buttons .btn {
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    /* Text */
+    .text-xl {
+        font-size: 1.9rem;
+    }
+
+    /* Service Section */
+    .services-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+
+    .services-light {
+        padding: 0;
+    }
+
+    .services-light h2 {
+        font-size: 19px;
+    }
+
+    
+    /* ekahau */
+    .ekahau {
+        grid-template-columns: 1fr;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    
+    .container-slide {
+        grid-template-columns: 1fr; /* Endrer til en enkelt kolonne layout */
+        height: auto;
+    }
+
+    .slides {
+        height: 300px;
+    }
+
+    .text-content {
+        padding: 20px; /* Legg til ekstra mellomrom over og under */
+        align-items: center;
+        text-align: center;    
+    }
+
+    .btn-ther {
+        width: 55%; /* Juster bredden for bedre proporsjoner */
+        margin-bottom: 20px;
+    }
+
+    /*Contact Section */
+    .contact {
+        padding: 20px;
+    }
+
+
+    .content {
+        width: 90%;
+    }
+
+    .content h2 {
+        margin-bottom: 15px;
+    }
+
+    .container-flex {
+        flex-direction: column;
+    }
+
+    .container-flex .contactInfo {
+        margin-bottom: 40px;
+    }
+    .container-flex .contactInfo,
+    .contactForm {
+        width: 100%;
+        
+    }
+
+    .contactForm {
+        text-align: center;
+        align-items: center;
+    }
+
+  }
+
+
+ 
+ 
+
+ 
+
+  /*
+  
+  .bg-light {
+    background-color: #5e5e5e;
+}
+
+.video {
+    padding-bottom: 50px;
+}
+
+.video-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 13px;
+}
+
+.video-content video {
+    width: 170%; 
+    margin: -20%; 
+}
+  
+  
+   <!-- Services -->
+    <section class="services-dark bg-light text-center-dark">
+      <div class="container-sm">
+        <h2 class="text-heading text-xl text-center-dark">
+          Invester i din trygghet i dag med vårt utvalg av sikkerhetstjenester.
+        </h2>
+      </div>
+    </section>
+
+    <section class="video bg-light">
+      <div class="container-sm">
+        <div class="video-content">
+          <video autoplay loop muted plays-inline preload="auto">
+            <source src="img /video-løsdet.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+  */
